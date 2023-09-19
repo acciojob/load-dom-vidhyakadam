@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Load Example</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <!-- The body tag is initially empty -->
+    
+    <script>
+        // Function to add "DOM load success" to the webpage
+        function addDOMLoadSuccess() {
+            var body = document.body;
+            var domLoadSuccessDiv = document.createElement("div");
+            domLoadSuccessDiv.textContent = "DOM load success";
+            body.appendChild(domLoadSuccessDiv);
+        }
 
+        // Add an event listener to wait for the DOM to be fully loaded
+        document.addEventListener("DOMContentLoaded", addDOMLoadSuccess);
+    </script>
 </body>
-
 </html>
